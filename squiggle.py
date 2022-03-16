@@ -40,10 +40,20 @@ class squiggle():
 	file.close()
 
 	y = 0
+	r = random.randint(0,100)/100
+	g = random.randint(0,100)/100
+	b = 0
+
 
 	for i in range(150):
-		squiggle(0,y,300,y, 300, fileName)
-		y += 4
+		file = open(fileName, "a")
+		file.write(str(0) + " " + str(0) + " " + str(b) + " setrgbcolor\n")
+		file.close()
+		r = random.randint(0,100)/100
+		g = random.randint(0,100)/100
+		b += (2/3)/100
+		squiggle(0,y,300,y, 500, fileName)
+		y += 2
 
 	file = open (fileName, "a")
 
